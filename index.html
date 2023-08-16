@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTMX Quicky</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Home</h1>
+      <nav role="primary">
+        <a href="/" hx-get="/home.html" hx-target="main">Home</a>
+        <a href="/notes.html" hx-get="/notes.html" hx-target="main">Notes</a>
+        <a href="/equip.html" hx-get="/equip.html" hx-target="main">Equipment</a>
+      </nav>
+    </header>
+    <main hx-get="/home.html" hx-trigger="load">
+      This is the home page!
+    </main>
+  </body>
+</html>
